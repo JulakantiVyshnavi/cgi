@@ -1,0 +1,69 @@
+***Algorithm for accepting two numbers, divide first number by second and display quotient.***
+1)Start
+2)Accept the first number and store it in a variable "num1"
+3)Accept the second number and store it in a variable "num2"
+4)If num2 is equal to 0, display an error message "Cannot divide by zero" and stop the program.
+5)Otherwise, divide num1 by num2 and store the quotient in a variable "result".
+6)Display the value of "result".
+7)Stop.
+
+*Example program in python*
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+
+if num2 == 0:
+    print("Error: Cannot divide by zero")
+else:
+    result = num1 / num2
+    print("The quotient is: ", result)
+	
+***algorithm to take input in kilometers and convert into meters and display the result***
+*Start
+*Accept the distance in kilometers and store it in a variable "distance_km".
+*Multiply the distance_km by 1000 to convert it into meters, and store the result in a variable "distance_m".
+*Display the value of "distance_m".
+*Stop.
+
+*Example program in python*	
+distance_km = float(input("Enter the distance in kilometers: "))
+distance_m = distance_km * 1000
+print("The distance in meters is:", distance_m)
+
+*** ake 5 numbers and find avg and sum***
+Start
+Accept the first number and store it in a variable "num1".
+Accept the second number and store it in a variable "num2".
+Accept the third number and store it in a variable "num3".
+Accept the fourth number and store it in a variable "num4".
+Accept the fifth number and store it in a variable "num5".
+Calculate the sum of all the numbers by adding them together, and store the result in a variable "total".
+Calculate the average of the numbers by dividing the total by 5, and store the result in a variable "average".
+Display the value of "total" and "average".
+Stop.
+ Example program in python
+ num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+num3 = float(input("Enter the third number: "))
+num4 = float(input("Enter the fourth number: "))
+num5 = float(input("Enter the fifth number: "))
+
+total = num1 + num2 + num3 + num4 + num5
+average = total / 5
+
+print("The sum of the numbers is:", total)
+print("The average of the numbers is:", average)
+
+***take a number and find it odd or even***
+Start
+Accept a number as input and store it in a variable "num".
+Divide the number by 2 and check the remainder. If the remainder is 0, the number is even. If the remainder is 1, the number is odd.
+If the remainder is 0, display a message "The number is even".
+If the remainder is 1, display a message "The number is odd".
+Stop.
+**Example program in python**
+num = int(input("Enter a number: "))
+if num % 2 == 0:
+    print("The number is even")
+else:
+    print("The number is odd")
+
