@@ -1,0 +1,59 @@
+using System;
+
+public class PhoneNumberValidator
+{
+    private string phoneNumber;
+    private int validationResult;
+
+    public string GetInput()
+    {
+        Console.Write("Enter a phone number: ");
+        phoneNumber = Console.ReadLine();
+        return phoneNumber;
+    }
+
+    public int ValidatePhoneNumber(string phoneNumber)
+    {
+        // Check if the phone number is empty or null
+        if (string.IsNullOrEmpty(phoneNumber))
+        {
+            return -1; // Return -1 for empty/null input
+        }
+
+        // Remove dashes from the phone number and store only digits
+        string normalizedNumber = "";
+        for (int i = 0; i < phoneNumber.Length; i++)
+        {
+            char c = phoneNumber[i];
+            if (char.IsDigit(c))
+            {
+                normalizedNumber += c; // Append digits to the normalized number
+            }
+            else if (c != '-')
+            {
+                return 0; // Return 0 if the character is not a digit or dash
+            }
+        }
+
+        // Check if the normalized number has exactly 10 digits
+        if (normalizedNumber.Length != 10)
+        {
+            return 0; // Return 0 if the length is not 10
+        }
+
+        return 1; // Return 1 for a valid phone number
+    }
+
+    public void DisplayResult()
+    {
+        Console.WriteLine(validationResult == 1 ? "Valid" : "Invalid");
+    }
+
+    public static void Main(string[] args)
+    {
+        PhoneNumberValidator validator = new PhoneNumberValidator();
+        string phoneNumber = validator.GetInput();
+        validator.validationResult = validator.ValidatePhoneNumber(phoneNumber);
+        validator.DisplayResult();
+    }
+}
